@@ -300,9 +300,9 @@ internal class CalculatorViewController: UIViewController {
         
         view.addSubview(containerStackView)
         containerStackView.translatesAutoresizingMaskIntoConstraints = false
-        containerStackView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        containerStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        containerStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        containerStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        containerStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        containerStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        containerStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        containerStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
     }
 }
