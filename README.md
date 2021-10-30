@@ -39,3 +39,15 @@ it will show all the view inside the stackview.
 
 ![Simulator Screen Shot - iPhone 13 - 2021-10-30 at 14 12 16](https://user-images.githubusercontent.com/5819701/139524250-77adbc96-9562-4611-8cbe-eaa0139c38e7.png)           ![Simulator Screen Shot - iPhone 13 - 2021-10-30 at 14 12 35](https://user-images.githubusercontent.com/5819701/139524280-54d76859-f27a-4bdb-b736-2336af25da8e.png)
 
+
+
+### Create calculator view with UIStackview
+
+
+![Simulator Screen Shot - iPhone 13 - 2021-10-30 at 15 05 06](https://user-images.githubusercontent.com/5819701/139525383-105e791e-7cff-4030-a4e9-966f06ece41a.png)
+
+
+```
+notes:
+its more convenience use stackview, instead of manual add constraint to view
+```
