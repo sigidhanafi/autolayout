@@ -14,6 +14,7 @@ internal class CalculatorViewController: UIViewController {
         var stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
+        stackView.spacing = 1
         return stackView
     }()
     
@@ -42,6 +43,7 @@ internal class CalculatorViewController: UIViewController {
         var stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
+        stackView.spacing = 1
         return stackView
     }()
     
@@ -49,6 +51,7 @@ internal class CalculatorViewController: UIViewController {
         var stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
+        stackView.spacing = 1
         return stackView
     }()
     
@@ -56,6 +59,7 @@ internal class CalculatorViewController: UIViewController {
         var stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
+        stackView.spacing = 1
         return stackView
     }()
     
@@ -63,13 +67,15 @@ internal class CalculatorViewController: UIViewController {
         var stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
+        stackView.spacing = 1
         return stackView
     }()
     
     private let row5: UIStackView = {
         var stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fillProportionally
+        stackView.spacing = 1
         return stackView
     }()
     
@@ -235,15 +241,6 @@ internal class CalculatorViewController: UIViewController {
         return button
     }()
     
-    private let commaButton: UIButton = {
-        var button = UIButton()
-        button.backgroundColor = .darkGray
-        button.setTitle(",", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 24)
-        return button
-    }()
-    
     private let equalButton: UIButton = {
         var button = UIButton()
         button.backgroundColor = .orange
@@ -287,8 +284,9 @@ internal class CalculatorViewController: UIViewController {
         
         row5.addArrangedSubview(zeroButton)
         row5.addArrangedSubview(dotButton)
-        row5.addArrangedSubview(commaButton)
         row5.addArrangedSubview(equalButton)
+        dotButton.widthAnchor.constraint(equalTo: equalButton.widthAnchor).isActive = true
+        zeroButton.widthAnchor.constraint(equalTo: equalButton.widthAnchor, multiplier: CGFloat(2)).isActive = true
         
         valueStackView.addArrangedSubview(valueLabel)
         
