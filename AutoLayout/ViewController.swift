@@ -65,8 +65,8 @@ class ViewController: UIViewController {
         view.addSubview(topContainer)
         topContainer.translatesAutoresizingMaskIntoConstraints = false
         topContainer.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        topContainer.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        topContainer.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        topContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        topContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         let centerMinusSquare = Int((UIScreen.main.bounds.height / 2)) - (squareSizeOfMenu / 2)
         topContainer.heightAnchor.constraint(equalToConstant: CGFloat(centerMinusSquare)).isActive = true
         
@@ -77,15 +77,14 @@ class ViewController: UIViewController {
         aboutMenu.widthAnchor.constraint(equalToConstant: CGFloat(squareSizeOfMenu)).isActive = true
         aboutMenu.heightAnchor.constraint(equalToConstant: CGFloat(squareSizeOfMenu)).isActive = true
         let leftAnchor = Int(UIScreen.main.bounds.width / 2) - squareSizeOfMenu - 10
-        aboutMenu.leftAnchor.constraint(equalTo: middleContainer.leftAnchor, constant: CGFloat(leftAnchor)).isActive = true
-        aboutMenu.rightAnchor.constraint(equalTo: codeMenu.leftAnchor, constant: -20).isActive = true
+        aboutMenu.leadingAnchor.constraint(equalTo: middleContainer.leadingAnchor, constant: CGFloat(leftAnchor)).isActive = true
+        aboutMenu.trailingAnchor.constraint(equalTo: codeMenu.leadingAnchor, constant: -20).isActive = true
         
         codeMenu.translatesAutoresizingMaskIntoConstraints = false
         codeMenu.widthAnchor.constraint(equalToConstant: CGFloat(squareSizeOfMenu)).isActive = true
         codeMenu.heightAnchor.constraint(equalToConstant: CGFloat(squareSizeOfMenu)).isActive = true
         let rightAnchor = Int(UIScreen.main.bounds.width / 2) - squareSizeOfMenu - 10
-        codeMenu.rightAnchor.constraint(equalTo: middleContainer.rightAnchor, constant: CGFloat(-rightAnchor)).isActive = true
-        codeMenu.leftAnchor.constraint(equalTo: aboutMenu.rightAnchor).isActive = true
+        codeMenu.trailingAnchor.constraint(equalTo: middleContainer.trailingAnchor, constant: CGFloat(-rightAnchor)).isActive = true
         
         view.addSubview(middleContainer)
         middleContainer.translatesAutoresizingMaskIntoConstraints = false
