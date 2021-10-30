@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     private let titleLabel: UILabel = {
         var label = UILabel();
-        label.text = "Calculator App"
+        label.text = "AutoLayout App"
         label.font = UIFont.systemFont(ofSize: 24)
         label.textAlignment = .center
         return label
@@ -48,6 +48,12 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         
         setupView()
+        
+        // add tap gesture
+        let tapGestureRecog = UITapGestureRecognizer()
+        tapGestureRecog.addTarget(self, action: #selector(tapCodeMenu))
+        codeMenu.addGestureRecognizer(tapGestureRecog)
+        codeMenu.isUserInteractionEnabled = true
     }
     
     private func setupView() {
@@ -87,6 +93,11 @@ class ViewController: UIViewController {
         middleContainer.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         middleContainer.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         middleContainer.heightAnchor.constraint(equalToConstant: CGFloat(squareSizeOfMenu)).isActive = true
+    }
+    
+    @objc
+    func tapCodeMenu() {
+        self.navigationController?.pushViewController(CalculatorViewController(), animated: true)
     }
 
 }
