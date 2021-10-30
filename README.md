@@ -27,6 +27,14 @@ There are some key point:
 Axis horizontal means, the leading edge of the first element of stackview will pinned to the stack's leading edge, and the last element trailing egde will pinned to the stack's trailing edge
 Axis vertical means, the top edge of the first element of the stackview will pinned to the stack's top edge, and the last element bottom edge will pinned to the stack's bottom edge
 
+```
+notes:
+If I have several view inside a stackview, and I set stackview distribution to fill, 
+the stackview will only show the first of the element.
+but If I set distribution to fillEqually or fillPorpotionally,
+it will show all the view inside the stackview.
+```
+
 ### Horizontal Axis & Vertical Axis
 
 ![Simulator Screen Shot - iPhone 13 - 2021-10-30 at 14 12 16](https://user-images.githubusercontent.com/5819701/139524250-77adbc96-9562-4611-8cbe-eaa0139c38e7.png)           ![Simulator Screen Shot - iPhone 13 - 2021-10-30 at 14 12 35](https://user-images.githubusercontent.com/5819701/139524280-54d76859-f27a-4bdb-b736-2336af25da8e.png)
