@@ -1,4 +1,4 @@
-# refreshing my autolayout knowledge
+# Refreshing my autolayout knowledge
 I want to refresh my knowledge about autolayout programatically with constrain (pin, alignment, adn stackview)
 
 ### Image with constrain
@@ -43,8 +43,18 @@ it will show all the view inside the stackview.
 
 ### Create calculator view with UIStackview
 
+- create UIStackview with axis, distribution and spacing
 
-![Simulator Screen Shot - iPhone 13 - 2021-10-30 at 15 05 06](https://user-images.githubusercontent.com/5819701/139525383-105e791e-7cff-4030-a4e9-966f06ece41a.png)
+![Simulator Screen Shot - iPhone 13 - 2021-10-30 at 22 23 30](https://user-images.githubusercontent.com/5819701/139539336-23a7d961-3ecc-41bd-ad15-44f5c49f9c16.png)
+
+How to achive this `zero button` twice bigger than `equal button`?
+
+```
+dotButton.widthAnchor.constraint(equalTo: equalButton.widthAnchor).isActive = true
+zeroButton.widthAnchor.constraint(equalTo: equalButton.widthAnchor, multiplier: CGFloat(2)).isActive = true
+```
+
+<img width="150" alt="Screen Shot 2021-10-30 at 22 25 05" src="https://user-images.githubusercontent.com/5819701/139539442-4b17bcf8-b179-4bae-8339-49f48249d4d1.png">
 
 
 ```
